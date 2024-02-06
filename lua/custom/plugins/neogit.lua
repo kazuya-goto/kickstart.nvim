@@ -8,5 +8,11 @@ return {
     "nvim-telescope/telescope.nvim", -- optional
     -- "ibhagwan/fzf-lua",              -- optional
   },
-  config = true
+  config = function()
+    local neogit = require("neogit")
+
+    neogit.setup {
+      graph_style = "unicode",
+    }
+  end,
 }
